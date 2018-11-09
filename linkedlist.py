@@ -13,16 +13,14 @@ class Solution:
       
         remainder = 0
         head = node = ListNode(None)
-        first = True
 
         while first_linked or second_linked:
             
-            l1_val = 0  if first_linked ==  None  else first_linked.val
+            l1_val = 0 if first_linked ==  None  else first_linked.val
             l2_val = 0 if second_linked == None  else second_linked.val
             _sum =l1_val + l2_val + remainder
             temp = ListNode( _sum % 10 )
             remainder = 0 if _sum <=9 else 1
-                
 
             node.next = temp
             node = temp
@@ -32,6 +30,7 @@ class Solution:
 
             if remainder != 0 and (not first_linked and not second_linked ):
                 node.next = ListNode(remainder)
+        
         head = head.next
         return head
 
