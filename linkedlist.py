@@ -6,8 +6,8 @@ class ListNode:
 class Solution:
     def addTwoNumbers(self, first_linked, second_linked):
         """
-        :type l1: ListNode
-        :type l2: ListNode
+        :type first_linked: ListNode
+        :type second_linked: ListNode
         :rtype: ListNode
         """
       
